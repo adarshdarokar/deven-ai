@@ -1,0 +1,27 @@
+.right {
+    width: 0;
+}
+html, body {
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    .right {
+        width: 0%;
+    }
+
+    .explorer {
+        position: absolute;
+        left: 0;
+        width: 100vw;
+        bottom: 0;
+        height: 1px;
+        transform: translateY(100%); /* Start below screen */
+        transition: transform 0.5s ease-in-out; /* Animation */
+    }
+
+    .explorer.active {
+        transform: translateY(-50%); /* Upar aa jayega */
+        height: 100vh; /* Agar height bhi badalni ho */
+    }
+}
